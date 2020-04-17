@@ -6,7 +6,7 @@
 /*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 17:21:56 by iwillens          #+#    #+#             */
-/*   Updated: 2020/04/15 08:00:53 by iwillens         ###   ########.fr       */
+/*   Updated: 2020/04/17 09:33:26 by iwillens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*ft_fillnchr_start(char *str, char c, size_t n)
 	signal = 0;
 	if (n >= (str_len = ft_strlen(str)))
 	{
-		if (ft_issignednum(str) && (str[0] == '-' || str[0] == '+'))
+		if (ft_is_signednum(str) && (str[0] == '-' || str[0] == '+'))
 		{
 			if (str[0] == '-')
 				signal = 1;
