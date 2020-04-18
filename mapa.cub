@@ -1,11 +1,11 @@
 F 173 , 97, 21
 C 127 ,    209  ,  246
 R 1024 800
-NO ./tex/mario2.xpm
-SO ./tex/mario4.xpm
-WE ./tex/mario3.xpm
-EA ./tex/mario1.xpm
-S ./tex/bowser.xpm
+NO ./tex/brick.xpm
+SO ./tex/grass.xpm
+WE ./tex/metal.xpm
+EA ./tex/stone.xpm
+S ./tex/wood.xpm
 
 
 
