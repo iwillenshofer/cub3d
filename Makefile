@@ -12,9 +12,9 @@
 
 FRAMEWORK_MAC = -framework OpenGL -framework AppKit
 
-FRAMEWORK_LINUX = -lXext -lX11
+FRAMEWORK_LINUX = -lXext -lX11 -lbsd -lm
 
-MLX_DIR = ./minilibx_opengl
+MLX_DIR = ./minilibx-linux-master
 
 MLX = -L$(MLX_DIR) -lmlx
 
@@ -55,8 +55,6 @@ OBJS = $(patsubst %.c, %.o, $(SRCS))
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(MAKE) -C ./libft
-	$(MAKE) clean -C ./libft
 	clang $(FLAGS) $(OBJS) $(INCLUDES) $(LIBFT) $(MLX) $(FRAMEWORK_LINUX) -o $(NAME)
 
 %.o : %.c $(HEADERS) $(LIBFT_DIR)/libft.a $(MLX_DIR)/minilibx.a
@@ -64,13 +62,13 @@ $(NAME) : $(OBJS)
 
 $(LIBFT_DIR)/libft.a:
 	$(MAKE) -C $(LIBFT_DIR)
-	$(MAKE) clean -C $(LIBFT_DIR)
 
 $(MLX_DIR)/minilibx.a:
 	$(MAKE) -C $(MLX_DIR)
 
 clean: 
 	@rm -f $(OBJS)
+	$(MAKE) clean -C $(LIBFT_DIR)
 
 fclean : clean
 	@rm -f $(NAME)

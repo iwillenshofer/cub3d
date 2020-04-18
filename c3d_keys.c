@@ -18,6 +18,15 @@ int		close_button(t_game *game)
 	return (0);
 }
 
+int		get_message(int message, t_game *game)
+{
+	(void)game;
+	//exit_program(game, 1);
+	ft_putnbr(message);
+	ft_putstr("*******");
+	return (0);
+}
+
 int		get_keystroke(int keycode, t_game *game)
 {
 	if (keycode == KEY_ESC)
@@ -44,4 +53,5 @@ void	setup_hooks(t_game *game)
 {
 	mlx_hook(game->screen.win, X11_KEYPRESS, 1L << 0, get_keystroke, game);
 	mlx_hook(game->screen.win, X11_DESTROY, 0, close_button, game);
+	mlx_hook(game->screen.win, 33, 0, close_button, game);
 }

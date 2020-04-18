@@ -97,8 +97,8 @@ void	draw_sprite_image(t_game *g, int z, int x)
 													g->sprites[z].draw_h;
 			if (i.x > 0 && i.x < g->screen.w && i.y > 0 && i.y < g->screen.h
 								&& g->sprites[z].pdist < g->rays.z_buffer[i.x])
-				(color = get_tex_color(&g->textures[4], tex.x, tex.y)) !=
-				0xff000000 ? write_pixel(&g->screen, i.x, i.y, (int)color) : 0;
+				((color = get_tex_color(&g->textures[4], tex.x, tex.y)) &
+				0x00FFFFFF) ? write_pixel(&g->screen, i.x, i.y, color) : 0;
 			i.y++;
 		}
 		i.x++;
