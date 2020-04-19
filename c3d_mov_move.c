@@ -15,7 +15,7 @@
 void	move_up(t_game *g)
 {
 	if (g->map.worldmap[(int)(g->player.pos.x + g->player.dir.x *
-			(g->walk_speed  * 4))][(int)(g->player.pos.y)] == 0)
+			(g->walk_speed * 4))][(int)(g->player.pos.y)] == 0)
 		g->player.pos.x += g->player.dir.x * g->walk_speed;
 	if (g->map.worldmap[(int)(g->player.pos.x)][(int)(g->player.pos.y +
 			g->player.dir.y * (g->walk_speed * 4))] == 0)
@@ -28,7 +28,7 @@ void	move_down(t_game *g)
 			(g->walk_speed * 3))][(int)(g->player.pos.y)] == 0)
 		g->player.pos.x -= g->player.dir.x * g->walk_speed;
 	if (g->map.worldmap[(int)(g->player.pos.x)][(int)(g->player.pos.y -
-			g->player.dir.y * (g->walk_speed  * 3))] == 0)
+			g->player.dir.y * (g->walk_speed * 3))] == 0)
 		g->player.pos.y -= g->player.dir.y * g->walk_speed;
 }
 
