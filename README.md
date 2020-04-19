@@ -1,6 +1,6 @@
 <p align="center">
-	<img width="130px;" src="https://game.42sp.org.br/static/assets/images/42_logo_black.svg" align="center" alt="42" />&nbsp;&nbsp;&nbsp;
-	<img width="130px" src="https://game.42sp.org.br/static/assets/achievements/cub3dm.png" align="center" alt="cub3d" />
+	<img width="130px;" src="https://raw.githubusercontent.com/iwillenshofer/resources/main/images/42_logo_black.svg" align="center" alt="42" />&nbsp;&nbsp;&nbsp;
+	<img width="130px" src="https://raw.githubusercontent.com/iwillenshofer/resources/main/achievements/cub3d.png" align="center" alt="cub3d" />
 	<h1 align="center">cub3d</h1>
 </p>
 <p align="center">
@@ -22,7 +22,7 @@
 
 > _This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever. It will enable you to explore ray-casting. Your goal will be to make a dynamic view inside a maze, in which you'll have to find your way._
 
-[Download the Subject ⤓](en.subject.pdf)
+
 
 <br>
 
@@ -69,4 +69,4 @@ $ ./cub3d mapa.cub
 ```
 
 ### Info
-This project was developed on Ubuntu Linux 20.04. 
+This project was developed on Ubuntu Linux 20.04.
