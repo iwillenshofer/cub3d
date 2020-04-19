@@ -6,7 +6,7 @@
 /*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 20:31:12 by iwillens          #+#    #+#             */
-/*   Updated: 2020/04/14 22:23:27 by iwillens         ###   ########.fr       */
+/*   Updated: 2020/04/19 03:29:29 by iwillens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ int	compare_arguments(char *s, t_game *game)
 	int		ret;
 	int		commas;
 	char	*orig_str;
-	int		i = 0;
 
 	orig_str = ft_strdup(s);
 	commas = ft_countchr(s, ',');
@@ -116,10 +115,11 @@ int	compare_arguments(char *s, t_game *game)
 	ret = check_arguments(game, str, &game->file) *
 		check_commas(orig_str, str, commas);
 	free(orig_str);
-	while (str[i])
+	commas = 0;
+	while (str[commas])
 	{
-		free(str[i]);
-		i++;
+		free(str[commas]);
+		commas++;
 	}
 	free(str);
 	return (ret);

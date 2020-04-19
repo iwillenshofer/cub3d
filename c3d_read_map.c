@@ -6,7 +6,7 @@
 /*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/13 08:42:55 by iwillens          #+#    #+#             */
-/*   Updated: 2020/04/14 22:40:08 by iwillens         ###   ########.fr       */
+/*   Updated: 2020/04/19 03:27:36 by iwillens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int					read_map(t_game *game)
 	game->map.worldmap = (int**)ft_calloc(game->map.w, sizeof(int*));
 	if (!(parse_map(game, map.x)))
 		return (0);
-	if ((str[i] && ft_strlen(str[i]) >= 1 && str[i][0] != '\n') || str[i+1])
+	if ((str[i] && ft_strlen(str[i]) >= 1 && str[i][0] != '\n') || str[i + 1])
 		g_error_number = ERR_MAP_LINE_SPACES;
 	invert_map(game);
 	if (!(check_validmap(&game->map)))

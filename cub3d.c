@@ -6,7 +6,7 @@
 /*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 12:16:15 by iwillens          #+#    #+#             */
-/*   Updated: 2020/04/14 21:39:32 by iwillens         ###   ########.fr       */
+/*   Updated: 2020/04/19 03:28:38 by iwillens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ int g_error_number;
 
 int		exit_program(t_game *game, int ret_value)
 {
-	if(game->rays.z_buffer)
+	if (game->rays.z_buffer)
 		free(game->rays.z_buffer);
 	mem_freemap(game);
 	mem_freerays(game);
 	mem_freescreen(game);
 	mem_free_filedata(game);
 	mem_free_textures(game);
-	if(game->sprites)
+	if (game->sprites)
 		free(game->sprites);
 	exit(ret_value);
 }

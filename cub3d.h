@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/04/19 03:24:28 by iwillens          #+#    #+#             */
+/*   Updated: 2020/04/19 03:26:50 by iwillens         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
@@ -54,7 +65,7 @@ typedef struct	s_map
 {
 	int **worldmap;
 	int w;
-	int h;	
+	int h;
 }				t_map;
 
 typedef struct	s_screen
@@ -71,17 +82,16 @@ typedef struct	s_screen
 	double	fov;
 }				t_screen;
 
-
 typedef struct	s_player
 {
-	t_xy	pos;
-	t_xy	dir;
+	t_xy		pos;
+	t_xy		dir;
 	double		plane_dist;
 }				t_player;
 
 typedef struct	s_sprites
 {
-	int 	type;
+	int		type;
 	t_intxy	pos;
 	t_xy	rel_pos;
 	double	angle;
@@ -98,7 +108,7 @@ typedef struct	s_sprites
 /*
 ** dir: direction (vector) of the ray (x and y, -1 to 1)
 ** ddist: (delta distance). according to the direction (angle),
-**  how much must be ** traveled in x and y to find the next 
+**  how much must be ** traveled in x and y to find the next
 **  side of the box. --> Xa = 1/tan(angle);
 ** step:
 */
@@ -117,15 +127,15 @@ typedef struct	s_rays
 	int			side;
 	int			wall;
 	int			max_sprites;
-	double			*z_buffer;
+	double		*z_buffer;
 }				t_rays;
 
 typedef struct	s_textures
 {
 	char	*img;
 	void	*mlx;
-	int     width;
-    int     height;
+	int		width;
+	int		height;
 	int		bpx;
 	int		size_line;
 	int		endian;
@@ -237,7 +247,7 @@ int				get_map_char(t_game *game, t_intxy pos, int start_map);
 ** read_gnl
 */
 
-int 			get_next_line(char **line, int fd);
+int				get_next_line(char **line, int fd);
 char			*gnl_join(char *s1, char *s2);
 
 /*
@@ -261,7 +271,7 @@ int				get_texturepixel(t_game *game, int x, int y, int index);
 ** read textures
 */
 
-int 			read_textures(t_game *game);
+int				read_textures(t_game *game);
 /*
 ** error handling
 */
@@ -280,13 +290,13 @@ void			draw_sprites(t_game *game);
 ** bmp
 */
 
-int			convert_to_bmp(t_game *game);
+int				convert_to_bmp(t_game *game);
 
 /*
 ** gfx utils
 */
 
-int			set_resolution(t_game *game, char *w, char *h);
-int			rgb_toint(char *r, char *g, char *b);
+int				set_resolution(t_game *game, char *w, char *h);
+int				rgb_toint(char *r, char *g, char *b);
 
 #endif

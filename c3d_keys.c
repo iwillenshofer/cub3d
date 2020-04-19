@@ -6,12 +6,11 @@
 /*   By: iwillens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 17:34:36 by iwillens          #+#    #+#             */
-/*   Updated: 2020/04/15 07:42:01 by iwillens         ###   ########.fr       */
+/*   Updated: 2020/04/19 03:27:15 by iwillens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-#include	"mlx_int.h"
 
 int		close_button(t_game *game)
 {
