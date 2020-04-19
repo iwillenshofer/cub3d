@@ -56,7 +56,7 @@ void	init_position(t_game *game)
 	game->screen.fov = 66;
 	game->player.dir.x = 0;
 	game->player.dir.y = 1;
-	game->rotation_angle = 2;
+	game->rotation_angle = 5;
 	game->walk_speed = 0.22;
 }
 

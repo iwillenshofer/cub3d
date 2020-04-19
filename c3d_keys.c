@@ -11,19 +11,11 @@
 /* ************************************************************************** */
 
 #include "cub3d.h"
+#include	"mlx_int.h"
 
 int		close_button(t_game *game)
 {
 	exit_program(game, 1);
-	return (0);
-}
-
-int		get_message(int message, t_game *game)
-{
-	(void)game;
-	//exit_program(game, 1);
-	ft_putnbr(message);
-	ft_putstr("*******");
 	return (0);
 }
 

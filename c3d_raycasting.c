@@ -165,7 +165,6 @@ void			calculate_rays(t_game *game)
 	int i;
 
 	i = 0;
-	clear_screen(&game->screen);
 	clear_sprites(game);
 	while (i < game->screen.w)
 	{

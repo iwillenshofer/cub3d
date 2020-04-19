@@ -85,7 +85,7 @@ int			convert_to_bmp(t_game *game)
 	t_intxy pos;
 	int		**bmp;
 
-	fd = open("./imagem.bmp", O_WRONLY | O_APPEND | O_CREAT | O_TRUNC);
+	fd = open("./imagem.bmp", O_WRONLY | O_APPEND | O_CREAT | O_TRUNC, 755);
 	if (!fd)
 		return (0);
 	bmp = bmp_alloc(game);

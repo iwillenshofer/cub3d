@@ -24,7 +24,7 @@ LIBFT = -L./$(LIBFT_DIR) -lft
 
 INCLUDES = -I$(MLX_DIR) -I$(LIBFT_DIR)
 
-FLAGS = -Wall -Werror -Wextra -Wno-nullability-completeness -g 
+FLAGS = -Wall -Werror -Wextra -Wno-nullability-completeness -g
 
 NAME = cub3D
 
@@ -57,13 +57,13 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	clang $(FLAGS) $(OBJS) $(INCLUDES) $(LIBFT) $(MLX) $(FRAMEWORK_LINUX) -o $(NAME)
 
-%.o : %.c $(HEADERS) $(LIBFT_DIR)/libft.a $(MLX_DIR)/minilibx.a
+%.o : %.c $(HEADERS) $(LIBFT_DIR)/libft.a $(MLX_DIR)/libmlx.a
 	clang -c $(FLAGS) $< $(INCLUDES) -o $@
 
 $(LIBFT_DIR)/libft.a:
 	$(MAKE) -C $(LIBFT_DIR)
 
-$(MLX_DIR)/minilibx.a:
+$(MLX_DIR)/libmlx.a:
 	$(MAKE) -C $(MLX_DIR)
 
 clean: 

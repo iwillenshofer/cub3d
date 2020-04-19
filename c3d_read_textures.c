@@ -102,6 +102,7 @@ int	compare_arguments(char *s, t_game *game)
 	int		ret;
 	int		commas;
 	char	*orig_str;
+	int		i = 0;
 
 	orig_str = ft_strdup(s);
 	commas = ft_countchr(s, ',');
@@ -115,6 +116,11 @@ int	compare_arguments(char *s, t_game *game)
 	ret = check_arguments(game, str, &game->file) *
 		check_commas(orig_str, str, commas);
 	free(orig_str);
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
 	free(str);
 	return (ret);
 }

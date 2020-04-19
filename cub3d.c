@@ -16,11 +16,15 @@ int g_error_number;
 
 int		exit_program(t_game *game, int ret_value)
 {
+	if(game->rays.z_buffer)
+		free(game->rays.z_buffer);
 	mem_freemap(game);
 	mem_freerays(game);
 	mem_freescreen(game);
 	mem_free_filedata(game);
 	mem_free_textures(game);
+	if(game->sprites)
+		free(game->sprites);
 	exit(ret_value);
 }
 

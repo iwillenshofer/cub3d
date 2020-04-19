@@ -41,7 +41,7 @@ void		mem_freemap(t_game *game)
 
 	map = &game->map;
 	i = 0;
-	while (i < map->h)
+	while (i < map->w)
 	{
 		if (map->worldmap[i])
 			free(map->worldmap[i]);
